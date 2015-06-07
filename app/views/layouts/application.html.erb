@@ -2,13 +2,49 @@
 <html>
 <head>
   <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="sidebar">
+    <%= link_to root_path do %>
+      <%= image_tag "profile.jpg", class: "logo" %>
+    <% end %>
 
-<%= yield %>
+    <nav class="nav">
+      <p class="nav__title">Website</p>
+      <%= link_to "Blog", root_path, class: "nav__item" %>
+      <a href="" class="nav__item">About</a>
+    </nav>
+
+    <ul class="nav">
+      <p class="nav__title">Social</p>
+      <a class="nav__item" href="http://twitter.com/rubenmoya_">Twitter</a>
+      <a class="nav__item" href="http://facebook.com/rubenmoya.web">Facebook</a>
+      <a class="nav__item" href="http://github.com/rubenmoya">Github</a>
+    </ul>
+
+    <p class="sign_in">Admin Login</p>
+  </div>
+  <main class="main_content">
+    <div class="header">
+      <p class="header__title">All posts</p>
+
+      <div class="header__nav">
+        <%= link_to "New Post", new_post_path, class: "btn--header" %>
+        <a href="" class="btn--header">Log out</a>
+      </div>
+    </div>
+
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert") %>
+    <% end %>
+
+
+    <%= yield %>
+  </main>
 
 </body>
 </html>
