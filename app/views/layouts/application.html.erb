@@ -26,7 +26,9 @@
       <a class="nav__item" href="http://github.com/rubenmoya">Github</a>
     </ul>
 
-    <p class="sign_in">Admin Login</p>
+    <% if !user_signed_in? %>
+      <%= link_to "Admin Login", new_user_session_path, class: "sign_in" %>
+    <% end %>
   </div>
   <main class="main_content">
     <div class="header">
@@ -38,10 +40,12 @@
         <%= link_to "Back to home", root_path %>
       <% end %>
 
-      <div class="header__nav">
-        <%= link_to "New Post", new_post_path, class: "btn--header" %>
-        <a href="" class="btn--header">Log out</a>
-      </div>
+      <% if user_signed_in? %>
+        <div class="header__nav">
+          <%= link_to "New Post", new_post_path, class: "btn--header" %>
+          <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, class: "btn--header" %>
+        </div>
+      <% end %>
     </div>
 
     <% flash.each do |name, msg| %>
