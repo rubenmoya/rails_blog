@@ -19,3 +19,8 @@
   margin-left: .5em;
   margin-top: -6px;
 }
+
+.btn--right {
+  @extend .btn;
+  float: right;
+}

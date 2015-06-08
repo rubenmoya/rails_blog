@@ -1,0 +1,32 @@
+.comment {
+  border-bottom: 1px solid #d6dce0;
+  padding: 1.5em 2em;
+}
+.comment__title {
+  margin: 3em 0 1em 0;
+  border-bottom: 1px solid #d6dce0;
+  padding-bottom: 0.5em;
+}
+.comment__subtitle {
+  margin-top: 2em;
+}
+
+.comment__content {
+  float: left;
+}
+
+.comment__name {
+  margin: 1em 0 0 0;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+
+.comment__body {
+  font-size: 1.2em;
+  margin: 0.2em 0 0 0;
+}
+
+.comment__time {
+  margin-top: 1.2em;
+  font-size: .8em;
+}
