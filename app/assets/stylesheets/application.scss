@@ -22,6 +22,7 @@
 @import 'components/navigation';
 @import 'posts';
 @import 'comments';
+@import 'pages';
 
 html, body {
   font-family: 'Raleway', sans-serif;
@@ -46,36 +47,6 @@ a {
 
 .main_content {
   margin-left: 250px;
-}
-
-.page_wrapper {
-  padding: 3em;
-}
-
-.profile_image {
-  width: 300px;
-  float: left;
-  margin-right: 2em;
-
-  img {
-    width: 100%;
-    border-radius: 0.35em;
-  }
-}
-
-.content {
-  h1 {
-    font-weight: 500;
-  }
-  p {
-    font-size: 1.1em;
-    line-height: 1.75;
-  }
-  a {
-    color: #33acb7;
-    font-weight: 700;
-    text-decoration: none;
-  }
 }
 
 .links {

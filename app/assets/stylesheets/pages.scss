@@ -1,0 +1,25 @@
+.page {
+  padding: 3em;
+}
+
+.page__profile_image {
+  width: 250px;
+  float: left;
+  margin-right: 2em;
+  border-radius: 0.35em;
+}
+
+.page__content {
+  h1 {
+    font-weight: 500;
+  }
+  p {
+    font-size: 1.1em;
+    line-height: 1.75;
+  }
+  a {
+    color: #33acb7;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}

@@ -16,7 +16,7 @@
     <nav class="nav">
       <p class="nav__title">Website</p>
       <%= link_to "Blog", root_path, class: "nav__item" %>
-      <a href="" class="nav__item">About</a>
+      <%= link_to "About", about_path, class: "nav__item" %>
     </nav>
 
     <ul class="nav">
@@ -30,7 +30,13 @@
   </div>
   <main class="main_content">
     <div class="header">
-      <p class="header__title">All posts</p>
+      <% if current_page?(root_path) %>
+        <p class="header__title">All posts</p>
+      <% elsif current_page?(about_path) %>
+        <p class="header__title">About</p>
+      <% else %>
+        <%= link_to "Back to home", root_path %>
+      <% end %>
 
       <div class="header__nav">
         <%= link_to "New Post", new_post_path, class: "btn--header" %>
